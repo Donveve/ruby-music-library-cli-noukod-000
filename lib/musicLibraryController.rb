@@ -54,7 +54,7 @@ class MusicLibraryController
 #       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
 #     end
 #   end
-# 
+#
 #   def list_artists
 #     #prints all artists in the music library in a numbered list (alphabetized by artist name
 #     songs_sorted_by_artist = Artist.all.sort_by do |artist| #returns an array of artists sorted by artist name
@@ -64,7 +64,7 @@ class MusicLibraryController
 #       puts "#{index}. #{artist.name}"
 #     end
 #   end
-# 
+#
 #   def list_genres
 #     #prints all genres in the music library in a numbered list (alphabetized by genre name)
 #     songs_sorted_by_genre = Genre.all.sort_by do |genre|
@@ -74,8 +74,8 @@ class MusicLibraryController
 #       puts "#{index}. #{genre.name}"
 #     end
 #   end
-# 
-# 
+#
+#
 #   def list_songs_by_artist
 #     #prints all songs by a particular artist in a numbered list (alphabetized by song name)
 #     puts "Please enter the name of an artist:"
@@ -91,7 +91,7 @@ class MusicLibraryController
 #       end
 #     end
 #   end
-# 
+#
 #   def list_songs_by_genre
 #     #prints all songs by a particular genre in a numbered list (alphabetized by song name)
 #     puts "Please enter the name of a genre:"
@@ -107,11 +107,11 @@ class MusicLibraryController
 #       end
 #     end
 #   end
-# 
+#
 #   def play_song
 #     puts "Which song number would you like to play?"
 #     list_of_songs =  Song.all.sort{ |a, b| a.name <=> b.name }
-# 
+#
 #     input = gets.strip.to_i
 #     #if (input > 0) && (input <= list_of_songs.size)
 #     #if (input >= 1) && (input <= list_of_songs.size)
