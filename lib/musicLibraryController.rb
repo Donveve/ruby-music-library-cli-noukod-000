@@ -109,10 +109,9 @@ class MusicLibraryController
   end
 
   def play_song
-      puts "What song would you like to play?"
-      answer = gets.chomp.to_i
-      puts "Playing #{Song.all[answer-1].artist.name} - #{Song.all[answer-1].name} - #{Song.all[answer-1].genre.name}"
-  end
+  song = Song.all[gets.to_i - 1]
+  puts "Playing #{song.artist.name} - #{song.name} - #{song.genre.name}"
+end
   # def play_song
   #   puts "Which song number would you like to play?"
   #   list_of_songs =  Song.all.sort{ |a, b| a.name <=> b.name }
