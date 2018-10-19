@@ -1,13 +1,13 @@
-# require "pry"
+require "pry"
 # class MusicLibraryController
-# 
+#
 #   extend Concerns::Findable
-# 
+#
 #   def initialize(path = "./db/mp3s")
 #     new_importer_object = MusicImporter.new(path)
 #     new_importer_object.import
 #   end
-# 
+#
 #   def call
 #     input = ""
 #     while input != "exit"
@@ -21,7 +21,7 @@
 #       puts "To quit, type 'exit'."
 #       puts "What would you like to do?"
 #       input = gets.strip
-# 
+#
 #       case input
 #       when "list songs"
 #         list_songs
@@ -36,10 +36,10 @@
 #       when "play song"
 #         play_song
 #       end
-# 
+#
 #     end
 #   end
-# 
+#
 #   def list_songs
 # =begin
 #     Song.all.sort{ |a, b| a.name <=> b.name }.each.with_index(1) do |s, i|
@@ -54,7 +54,7 @@
 #       puts "#{index}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
 #     end
 #   end
-# 
+#
 #   def list_artists
 #     #prints all artists in the music library in a numbered list (alphabetized by artist name
 #     songs_sorted_by_artist = Artist.all.sort_by do |artist| #returns an array of artists sorted by artist name
@@ -64,7 +64,7 @@
 #       puts "#{index}. #{artist.name}"
 #     end
 #   end
-# 
+#
 #   def list_genres
 #     #prints all genres in the music library in a numbered list (alphabetized by genre name)
 #     songs_sorted_by_genre = Genre.all.sort_by do |genre|
@@ -74,8 +74,8 @@
 #       puts "#{index}. #{genre.name}"
 #     end
 #   end
-# 
-# 
+#
+#
 #   def list_songs_by_artist
 #     #prints all songs by a particular artist in a numbered list (alphabetized by song name)
 #     puts "Please enter the name of an artist:"
@@ -91,7 +91,7 @@
 #       end
 #     end
 #   end
-# 
+#
 #   def list_songs_by_genre
 #     #prints all songs by a particular genre in a numbered list (alphabetized by song name)
 #     puts "Please enter the name of a genre:"
@@ -107,7 +107,7 @@
 #       end
 #     end
 #   end
-# 
+#
 #   def play_song
 #   song = Song.all[gets.to_i - 1]
 #   puts "Playing #{song.artist.name} - #{song.name} - #{song.genre.name}"
@@ -146,11 +146,11 @@ class MusicLibraryController
       command = gets.chomp.downcase
       case command
       when "list songs"
-         Song.all.each_with_index{|song, index| 
+         Song.all.each_with_index{|song, index|
          puts "#{index+1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"}
       when "list artists"
         Artist.all.each{|artist| puts artist.name}
-      when "list genres" 
+      when "list genres"
         Genre.all.each{|genre| puts genre.name}
       when "play song"
         puts "Which song?"
