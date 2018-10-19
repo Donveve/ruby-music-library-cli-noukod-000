@@ -118,7 +118,7 @@ end
     list_of_songs =  Song.all.sort_by{ |a| a.name }
     list_of_songs.each.with_index(1) do |a, songs|
     if songs == selected_input
-    puts "Playing #{a.name} by #{song.artist.name}"
+    puts "Playing #{a.name} by #{a.artist.name}"
     end
   end
    end
